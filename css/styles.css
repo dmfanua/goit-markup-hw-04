@@ -6,7 +6,6 @@ body {
     font-size: 16px;
     line-height: 1.5;
     letter-spacing: 0.02em;
-    width: 1440px;
 }
 
 h1 {
@@ -78,8 +77,8 @@ img {
 
 .container {
     max-width: 1158px;
-    margin-left: 156px;
-    margin-right: 156px;
+    margin-left: auto;
+    margin-right: auto;
     padding: 0 15px;
 }
 
@@ -136,7 +135,10 @@ img {
     display: flex;
     gap: 40px;
     flex-grow: 50;
-    padding: 24px 0 24px 333px;
+}
+
+address {
+    margin-left: auto;
 }
 
 .link:hover, .link:focus {
@@ -170,13 +172,11 @@ img {
     height: 120px;
     margin-left: auto;
     margin-right: auto;
-    margin-top: 68px;
     margin-bottom: 48px;
 }
 
 .slogan-section {
     background: #2E2F42;
-    height: 600px;
     text-align: center;
     padding: 188px 0 188px;
 }
@@ -198,6 +198,8 @@ button {
     height: 56px;
     border: none;
     border-radius: 4px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 button:hover,
@@ -286,7 +288,6 @@ background: #f4f4fd;
 
 .item {
     width: calc((100% - 48px) / 3);
-    border: 1px solid #E7E9FC;
 }
 
 .item-info {
@@ -324,5 +325,6 @@ background: #f4f4fd;
 .footer-section .logo-link {
     display: inline-block;
     margin-bottom: 16px;
+    padding: 0;
 }
 
