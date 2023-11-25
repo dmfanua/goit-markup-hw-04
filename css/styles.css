@@ -69,8 +69,7 @@ img {
     margin-bottom: 0;
     text-decoration: none;
     padding: 24px 0;
-    transition: transform 250ms linear;
-    transition-property: cubic-bezier(0.4, 0, 0.2, 1);
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .section {
@@ -153,7 +152,7 @@ address {
 
 .current {
     position: relative;
-    color: #404BBF;
+    color: #404bbf;
 }
 
 .link.current::after {
@@ -166,8 +165,6 @@ address {
     height: 4px;
     border-radius: 2px;
     background-color: #404BBF;
-    transition: transform 250ms linear;
-    transition-property: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .menu {
@@ -197,11 +194,16 @@ address {
 }
 
 .slogan-section {
+    max-width: 1440px;
     background: #2E2F42;
     text-align: center;
     padding: 188px 0 188px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
     background-image: 
-    linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url("../images/people-office\ 1.jpg");
+    linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url("../images/people-office.jpg");
 }
 
 .button-text {
@@ -338,6 +340,7 @@ background: #f4f4fd;
 
 .item {
     width: calc((100% - 48px) / 3);
+    transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .item-info {
@@ -362,10 +365,10 @@ background: #f4f4fd;
     background-color: #4D5AE5;
     width: 100%;
     height: 300px;
+    padding: 40px 32px;
     overflow: auto;
     transform: translateY(100%);
-    transition: transform 250ms linear;
-    transition-property: cubic-bezier(0.4, 0, 0.2, 1);
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .item:hover .overlay {
@@ -431,11 +434,11 @@ box-shadow: 0px 2px 1px 0px rgba(46, 47, 66, 0.08),
     align-items: center;
     justify-content: center;
     gap: 16px;
-    width: 40px;
-    height: 40px;
+    width: 100%;
+    height: 100%;
     border-radius: 50%;
-    transition: transform 250ms linear;
-    transition-property: cubic-bezier(0.4, 0, 0.2, 1);
+    background-color: #4d5ae5;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .social-link:hover,
@@ -446,14 +449,19 @@ box-shadow: 0px 2px 1px 0px rgba(46, 47, 66, 0.08),
 .social-item {
     background-color: #4D5AE5;
     border-radius: 50%;
+    width: 40px;
+    height: 40px;
 }
 
-.footer-social p {
+.social-title {
     display: inline-block;
     color: #FFFFFF;
-    font-weight: bold;
+    font-weight: 500;
     margin-bottom: 16px;
     line-height: 1.5;
     letter-spacing: 0.02em;
 }
 
+.social-icon {
+    fill: #f4f4fd;
+}
