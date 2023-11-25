@@ -143,11 +143,33 @@ address {
 
 .link:hover, .link:focus {
     color: #404BBF;
+    transition: 250ms;
+    animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .nav .link:active {
     text-decoration: underline;
 }
+
+.current:active::after,
+.current:hover::after,
+.current:focus::after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 4px;
+    background-color:#404BBF;
+    transition: 250ms;
+    animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* .current:hover::after {
+    width: 67px;
+    height: 4px;
+    background-color: #404BBF;
+    content: "";
+    margin-top: 20px;
+} */
 
 .menu {
     display: flex;
@@ -179,6 +201,8 @@ address {
     background: #2E2F42;
     text-align: center;
     padding: 188px 0 188px;
+    background-image: 
+    linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url("../images/people-office\ 1.jpg");
 }
 
 .button-text {
@@ -205,6 +229,8 @@ button {
 button:hover,
 button:focus {
     background: #404BBF;
+    transition: 250ms;
+    animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /* секція 2 benefits */
@@ -238,6 +264,17 @@ button:focus {
     margin-bottom: 8px;
 }
 
+.benefits-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 112px;
+    border: 1px solid #8E8F99;
+    background-color: #F4F4FD;
+    border-radius: 4px;
+    margin-bottom: 8px;
+}
+
 /* секція 3 our team */
 
 .team-section {
@@ -257,6 +294,7 @@ background: #f4f4fd;
 .team-cards {
     width: calc((100% - 72px) / 4);
     border-radius: 0px 0px 4px 4px;
+
 }
 
 .card-info {
@@ -270,6 +308,19 @@ background: #f4f4fd;
 
 .team-text {
     text-align: center;
+    margin-bottom: 8px;
+}
+
+.card-info .social-list,
+.card-info .social-link {
+    gap: 24px;
+}
+
+.card-info .social-link:hover,
+.card-info .social-link:focus {
+    background-color: #404BBF;
+    transition: 250ms;
+    animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /* секція 4 portfolio */
@@ -300,7 +351,44 @@ background: #f4f4fd;
     margin-bottom: 8px;
 }
 
+.item-image {
+    position: relative;
+    overflow: hidden;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #4D5AE5;
+    width: 100%;
+    height: 300px;
+    overflow: auto;
+    transform: translateY(100%);
+    transition: transform 250ms linear;
+}
+
+.item:hover .overlay {
+    transform: translateY(0%);
+    transition: 250ms;
+    animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.item-image p {
+    color: #F4F4FD;
+    padding: 20px;
+}
+
 /* footer */
+
+.footer-container {
+    display: flex;
+    align-items: baseline;
+}
+
+.footer-box {
+    margin-right: 120px;
+}
 
 .logo-footer {
     color: #F4F4FD;
@@ -326,5 +414,42 @@ background: #f4f4fd;
     display: inline-block;
     margin-bottom: 16px;
     padding: 0;
+}
+
+.social-list {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+}
+
+.social-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+
+.social-link:hover,
+.social-link:focus {
+    background-color: #31D0AA;
+    transition: 250ms;
+    animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.social-item {
+    background-color: #4D5AE5;
+    border-radius: 50%;
+}
+
+.footer-social p {
+    display: inline-block;
+    color: #FFFFFF;
+    font-weight: bold;
+    margin-bottom: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
 }
 
