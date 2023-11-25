@@ -69,6 +69,7 @@ img {
     margin-bottom: 0;
     text-decoration: none;
     padding: 24px 0;
+    color: currentcolor;
     transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -109,7 +110,7 @@ img {
     text-align: left;
 }
 
-.nav a {
+.nav-link {
     color: #2E2F42;
     font-weight: 500;
     font-style: normal;
@@ -146,13 +147,18 @@ address {
     color: #404BBF;
 }
 
-.nav .link:active {
+.nav-link:hover,
+.nav-link:focus {
+    color: #404BBF;
+}
+
+.nav-link:active {
     text-decoration: underline;
 }
 
 .current {
     position: relative;
-    color: #404bbf;
+    color:#404bbf;
 }
 
 .link.current::after {
