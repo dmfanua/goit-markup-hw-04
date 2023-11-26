@@ -202,6 +202,7 @@ address {
 
 .slogan-section {
     max-width: 1440px;
+    margin: 0 auto;
     background: #2E2F42;
     text-align: center;
     padding: 188px 0 188px;
